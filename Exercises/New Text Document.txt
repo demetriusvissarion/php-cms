@@ -1,0 +1,116 @@
+<?php
+
+?>
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>PHP Learning</title>
+	<style>
+		header {
+			background: #e3e3e3;
+			padding: 2em;
+			text-align: center;
+		}
+	</style>
+</head>
+<body>
+<!-- 		<ul>
+			<?php
+				foreach ($names as $name) {
+					echo "<li>$name</li>";
+				}
+			?>
+		</ul>
+
+		<ul>
+			<?php foreach ($animals as $animal) : ?>
+					<li><?= $animal; ?></li>
+			<?php endforeach; ?>
+		</ul>
+
+		<ul>
+			<?php foreach ($person as $feature => $value) : ?>
+					<li><strong><?= $feature; ?></strong> <?= $value; ?></li>
+			<?php endforeach; ?>
+		</ul>
+
+		<h1>Task for the day</h1>
+		<ul>
+			<?php foreach ($task as $heading => $value) : ?>
+				<li>
+					<strong><?=  ucwords($heading); ?></strong> <?=  $value; ?>
+				</li>
+			<?php endforeach; ?>
+		</ul>
+
+
+		<h1>Task for the day</h1>
+		<ul>
+			<li>
+				<strong>Name: </strong> <?=  $task['title']; ?>
+			</li>
+			<li>
+				<strong>Due Date: </strong> <?=  $task['due']; ?>
+			</li>
+			<li>
+				<strong>Person Responsible: </strong> <?=  $task['assigned_to']; ?>
+			</li>
+			<li>
+
+				<strong>Status: </strong> 
+
+				<!-- standard way -->
+			<!--if ($task['completed']) {
+					echo '&#9989';
+				} else {
+					echo 'Incomplete';
+				} -->
+
+
+				<?php if ($task['completed']) : ?>
+				 	<span class="icon">&#9989;</span>
+				<?php else: ?>
+					<span class="icon">Incomplete</span>
+				<?php endif; ?>
+			</li>
+
+		</ul> -->
+	<ul>
+		<?php foreach ($tasks as $task) : ?>
+			<li>
+				<?php if ($task->completed) : ?>
+					<strike>
+				<?php endif; ?>
+
+				<?= $task->description; ?>
+
+				<?php if ($task->completed) : ?>
+					</strike>
+				<?php endif; ?>
+			</li>
+		<?php endforeach; ?>
+	</ul>
+</body>
+</html>
+
+
+-----------------------------------------------
+<!-- 	<ul>
+		<?php foreach ($tasks as $task) : ?>
+			<li>
+				<?php if ($task->completed) : ?>
+					<strike><?= $task->description; ?></strike>
+				<?php else: ?>
+					<?= $task->description; ?>
+				<?php endif; ?>
+			</li>
+		<?php endforeach; ?>
+	</ul> -->
+
+
+
+

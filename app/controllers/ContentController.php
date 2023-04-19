@@ -6,30 +6,24 @@ use App\Core\App;
 
 class ContentController
 {
-    public function store()
+    public function change()
     {
         $database = App::get('database');
 
         // Update page 1 content
-        $data = [
-            'id' => 1,
-            'content' => $_POST['page1_content']
-        ];
-        $database->update('pages', $data, 'id');
+        $id = 1;
+        $page_content = 'page1_content';
+        $database->update('pages', $id, $page_content);
 
         // Update page 2 content
-        $data = [
-            'id' => 2,
-            'content' => $_POST['page2_content']
-        ];
-        $database->update('pages', $data, 'id');
+        $id = 2;
+        $page_content = 'page2_content';
+        $database->update('pages', $id, $page_content);
 
         // Update page 3 content
-        $data = [
-            'id' => 3,
-            'content' => $_POST['page3_content']
-        ];
-        $database->update('pages', $data, 'id');
+        $id = 3;
+        $page_content = 'page3_content';
+        $database->update('pages', $id, $page_content);
 
         // Redirect back to the admin page
         return redirect('admin');

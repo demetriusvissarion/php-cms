@@ -36,7 +36,17 @@ class QueryBuilder
 		} catch (Exception $e) {
 			die('Whoops, something went wrong.');
 		}
-
-
 	}
-}
+
+    public function update($table, $id, $page_content)
+    {
+        $statement = $this->pdo->prepare("update $table set page_content = :page_content where id = :id");
+
+        $statement->execute([
+            'id' => $id,
+            'page_content' => $page_content
+        ]);
+
+        return $statement->rowCount();
+    }
+};

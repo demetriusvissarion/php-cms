@@ -8,6 +8,5 @@ $router->get('page3', 'PagesController@page3'); // Page 3
 $router->get('admin', 'PagesController@admin'); // Admin page
 $router->post('admin', 'ContentController@change'); // Handle content changes for all three pages
 
-
 $router->get('users', 'UsersController@index'); // Users page
 $router->post('users', 'UsersController@store'); 

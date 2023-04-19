@@ -1,6 +1,6 @@
 <?php require('partials/head.php') ?>
 
-<form method="POST" action="ContentController.php">
+<form method="POST" action="/admin">
     <h2><u>Page 1</u></h2>
     <p>
         <input type="text" name="page1_content" placeholder="new content">
@@ -8,7 +8,7 @@
     <button type="submit" >Submit</button>
 </form>
 
-<form method="POST" action="ContentController.php">
+<form method="POST" action="/admin">
     <h2><u>Page 2</u></h2>
     <p>
         <input type="text" name="page2_content" placeholder="new content">
@@ -16,7 +16,7 @@
     <button type="submit" >Submit</button>
 </form>
 
-<form method="POST" action="ContentController.php">
+<form method="POST" action="/admin">
     <h2><u>Page 3</u></h2>
     <p>
         <input type="text" name="page3_content" placeholder="new content">

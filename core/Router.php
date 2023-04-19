@@ -30,6 +30,7 @@ class Router
 	{
 		if (array_key_exists($uri, $this->routes[$requestType])) 
 		{
+			// var_dump($this->routes[$requestType][$uri]);
 			return $this->callAction(
 				...explode('@', $this->routes[$requestType][$uri])
 			);

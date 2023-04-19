@@ -1,9 +1,13 @@
 <?php
 
-$router->get('', 'PagesController@home');
-$router->get('about', 'PagesController@about');
-$router->get('contact', 'PagesController@contact');
-$router->get('admin', 'PagesController@admin');
+$router->get('', 'PagesController@home'); // Home page
+$router->get('page1', 'PagesController@page1'); // Page 1
+$router->get('page2', 'PagesController@page2'); // Page 2
+$router->get('page3', 'PagesController@page3'); // Page 3
 
-$router->get('users', 'UsersController@index'); 
+$router->get('admin', 'PagesController@admin'); // Admin page
+$router->post('admin', 'ContentController@change'); // Handle content changes for all three pages
+
+
+$router->get('users', 'UsersController@index'); // Users page
 $router->post('users', 'UsersController@store'); 

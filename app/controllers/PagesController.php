@@ -10,23 +10,26 @@ class PagesController
         // 2. Delegate
         // 3. Return a response   
         
-        return view('index');
+        return view('home');
     }
 
-    public function about()
+    public function page1()
     {
-        $company = 'PHP Ltd.';
-
-        return view('about', ['company' => $company]);
+        return view('page1');
     }
 
-    public function contact()
+    public function page2()
     {
-        return view('contact');
+        return view('page2');
+    }
+
+    public function page3()
+    {
+        return view('page3');
     }
 
     public function admin()
     {
-        return view('s');
+        return view('admin');
     }
 }

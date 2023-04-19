@@ -1,8 +1,9 @@
 <nav>
 	<ul>
 		<li><a href="/">Home</a></li>
-		<li><a href="/about">About Page</a></li>
-		<li><a href="/contact">Contact Page</a></li>
+		<li><a href="/page1">Page 1</a></li>
+		<li><a href="/page2">Page 2</a></li>
+		<li><a href="/page3">Page 3</a></li>
 		<li><a href="/admin">Admin</a></li>
 	</ul>
 </nav>

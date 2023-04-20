@@ -4,6 +4,8 @@
 
 namespace App\Core;
 
+use \Exception;
+
 class App
 {
     protected static $registry = [];

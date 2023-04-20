@@ -12,7 +12,7 @@ $pdo = new PDO(
     $config['database']['options']
 );
 $db = new QueryBuilder($pdo);
-$page2Content = $db->selectAll('pages', ['page_content'], ['page_name' => 'page2'])[1]->page_content;
+$page2Content = $db->selectAll('admin', ['page_content'], ['page_name' => 'page2'])[1]->page_content;
 // $page2Content = $db->selectAll('page2')[0]->page2_text;
 ?>
 

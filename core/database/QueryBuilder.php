@@ -38,13 +38,13 @@ class QueryBuilder
 		}
 	}
 
-    public function update($table, $id, $page_content)
+    public function update($table, $parameters)
     {
         $statement = $this->pdo->prepare("update $table set page_content = :page_content where id = :id");
 
         $statement->execute([
-            'id' => $id,
-            'page_content' => $page_content
+            'id' => $parameters['id'],
+            'page_content' => $parameters['name']
         ]);
 
         return $statement->rowCount();

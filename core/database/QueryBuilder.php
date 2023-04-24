@@ -34,19 +34,24 @@ class QueryBuilder
 
 			$statement->execute($parameters);
 		} catch (Exception $e) {
-			die('Whoops, something went wrong.');
+			// die('insert died');
+			die('Whoops, something went wrong. (in QueryBuilder.php->insert)');
 		}
 	}
 
-    public function update($table, $parameters)
-    {
-        $statement = $this->pdo->prepare("update $table set page_content = :page_content where id = :id");
-
-        $statement->execute([
-            'id' => $parameters['id'],
-            'page_content' => $parameters['name']
-        ]);
-
-        return $statement->rowCount();
-    }
+	public function update($table, $id, $pageContent)
+	{
+		$statement = $this->pdo->prepare("UPDATE $table SET page_content = :page_content WHERE id = :id");
+	
+		try {
+			$statement->execute([
+				'id' => $id,
+				'page_content' => $pageContent
+			]);
+		} catch (Exception $e) {
+			die('Whoops, something went wrong. (in QueryBuilder.php->update)');
+		}
+	
+		return $statement->rowCount();
+	}
 };

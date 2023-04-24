@@ -12,13 +12,36 @@ class ContentController
         return view('admin', compact('admin'));
     }
 
-    public function store($name, $id)
+    public function page1_store()
     {
-        App::get('database')->update('admin', [
-        'name' => $name,
-        'id' => $id
-        ]);
-        
+        $name = $_POST['name'];
+        $id = $_POST['id'];
+    
+        if ($id == 1) {
+            App::get('database')->update('admin', $id, $name);
+        }
+        return redirect('admin');
+    }
+    
+    public function page2_store()
+    {
+        $name = $_POST['name'];
+        $id = $_POST['id'];
+    
+        if ($id == 2) {
+            App::get('database')->update('admin', $id, $name);
+        }
+        return redirect('admin');
+    }
+    
+    public function page3_store()
+    {
+        $name = $_POST['name'];
+        $id = $_POST['id'];
+    
+        if ($id == 3) {
+            App::get('database')->update('admin', $id, $name);
+        }
         return redirect('admin');
     }
 
